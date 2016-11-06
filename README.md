@@ -3,7 +3,7 @@ my libft for 42
 I list here the fonction is already created
 
 ft_strcmp
-
+ft_strncmp
 ft_atoi
 ft_isalpha
 ft_isdigit
