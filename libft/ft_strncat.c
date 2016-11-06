@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 16:52:30 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 17:14:49 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char		*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	(void)ac;
+	char		*back;
+	int			length_1;
+	int			length_2;
+	size_t		i;
+	size_t		j;
 
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	length_1 = ft_strlen(s1);
+	length_2 = ft_strlen(s2);
+	i = 0;
+	j = 0;
+	if (!(back = (char *)malloc(sizeof(char) * (length_1 + length_2 + 1))))
+		return (NULL);
+	while (s1[i])
+	{
+		back[i] = s1[i];
+		i++;
+	}
+	while (s2[j] && j < n)
+	{
+		back[i + j] = s2[j];
+		j++;
+	}
+	back[i + j] = '\0'; 
+	return (back);
 }

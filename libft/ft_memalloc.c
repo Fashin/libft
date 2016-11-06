@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 17:37:39 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 17:46:08 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char	*ft_memalloc(char *str, int size)
 {
-	(void)ac;
+	int		i;
+	char	*save;
 
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	i = 0;
+	if (!(save = (char *)malloc(sizeof(char) * ft_strlen(str))))
+	   return (NULL);
+	while (str[i])
+	{
+		save[i] = str[i];
+		i++;
+	}
+	i = 0;
+	if (!(str = (char *)malloc(sizeof(char) * size)))
+		return (NULL);
+	while (save[i])
+	{
+		str[i] = save[i];
+		i++;
+	}
+	free(save);
+	return (str);
 }

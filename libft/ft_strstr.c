@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 14:58:49 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 16:38:30 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char	*ft_strstr(const char *big, const char *little)
 {
-	(void)ac;
+	int		i;
+	int		j;
+	int		k;
+	int		count;
 
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	i = 0;
+	count = ft_strlen(little);
+	while (big[i])
+	{
+		j = 0;
+		k = i;
+		while (big[k] == little[j])
+		{
+			k++;
+			j++;
+		}
+		if (j == count)
+			return ((char *)big + i);
+		i++;
+	}
+	return (NULL);
 }

@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 18:20:22 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 18:41:13 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+void	*ft_memcpy(void *dst, void *src, size_t n)
 {
-	(void)ac;
-
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	int			i;
+	int			j;
+	return (dst);
 }

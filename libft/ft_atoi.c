@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 13:15:23 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 13:54:41 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/06 18:01:26 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ const char	*check_the_spaces(const char *str)
 	int		i;
 
 	i = 0;
-	while (str[i] == 32 || str[i] == 9)
+	while (str[i] == 32 || str[i] == 9 
+			|| str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\v' || str[i] == '\f'
+			|| str[i] == '\r')
 		i++;
 	return (&str[i]);
 }

@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 17:51:09 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 17:53:15 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char	*ft_strdup(const char *s1)
 {
-	(void)ac;
+	char	*back;
+	int		i;
 
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	i = 0;
+	if (!(back = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1)))
+		return (NULL);
+	while (s1[i])
+	{
+		back[i] = s1[i];
+		i++;
+	}
+	back[i] = '\0';
+	return (back);
 }

@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:40:56 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/06 16:48:33 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/06 16:50:25 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char		*ft_strrchr(const char *s, int c)
 {
-	(void)ac;
+	int		i;
+	int		pos;
 
-	printf("%s\n", memcpy(av[1], av[2], 3));
-	printf("%s\n", ft_memcpy(av[1], av[2], 3));
-	return (0);
+	i = 0;
+	pos = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			pos = i;
+		i++;
+	}
+	if (pos == 0 && s[0] != c)
+		return (NULL);
+	else
+		return ((char *)s + pos);
 }
