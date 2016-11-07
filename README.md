@@ -4,7 +4,10 @@ I list here the fonction is already created
 
 ft_memset
 ft_bzero
-do it : ft_memcpy / ft_memccpy / ft_memmove / ft_memchr / ft_memcmp
+ft_memcpy
+ft_memccpy
+ft_memmove
+do it : ft_memchr / ft_memcmp
 ft_strlen
 ft_strdup
 ft_strcpy
