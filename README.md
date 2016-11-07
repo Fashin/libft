@@ -2,6 +2,8 @@
 my libft for 42
 I list here the fonction is already created
 
+first parts :
+
 ft_memset
 ft_bzero
 ft_memcpy
@@ -30,6 +32,9 @@ ft_isascii
 ft_isprint
 ft_toupper
 ft_tolower
+ft_realloc (only for *char)
 
-I add :
-ft_memalloc (only for *char)
+second parts :
+
+ft_memalloc
+//I'm stop at ft_memdel
