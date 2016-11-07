@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/07 12:43:25 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/07 12:38:59 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/07 12:44:27 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	(void)ac;
-	printf("%d\n", memcmp(av[1], av[2], ft_strlen(av[1])));
-	printf("%d\n", ft_memcmp(av[1], av[2], ft_strlen(av[1])));
-	return (0);
+	char		*ss1;
+	char		*ss2;
+	size_t		max;
+
+	max = 0;
+	ss1 = (char *)s1;
+	ss2 = (char *)s2;
+	while (ss1[max] && ss2[max] && ss1[max] == ss2[max] && max < n)
+		max++;
+	if (max == n)
+		return (0);
+	else
+		return (ss1[max] - ss2[max]);
 }
