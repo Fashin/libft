@@ -6,17 +6,17 @@
 #    By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:48:58 by cbeauvoi          #+#    #+#              #
-#    Updated: 2016/11/07 12:42:17 by cbeauvoi         ###   ########.fr        #
+#    Updated: 2016/11/07 13:02:29 by cbeauvoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC_NAME = main ft_tolower ft_toupper ft_isprint ft_isascii \
 		   ft_isalpha ft_isdigit ft_isalnum ft_atoi ft_strcmp \
 		   ft_strncmp ft_strstr ft_strnstr ft_strlen ft_strchr \
-		   ft_strrchr ft_strcat ft_strncat ft_strlcat ft_memalloc \
+		   ft_strrchr ft_strcat ft_strncat ft_strlcat ft_realloc \
 		   ft_strcpy ft_strncpy ft_strdup ft_memset ft_bzero \
 		   ft_memcpy ft_memccpy ft_memmove ft_memchr ft_memcmp \
-
+		   ft_memalloc ft_memdel
 
 FILE = $(SRC_NAME:=.c)
 
