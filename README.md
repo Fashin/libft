@@ -37,4 +37,10 @@ ft_realloc (only for *char)
 second parts :
 
 ft_memalloc
-//I'm stop at ft_memdel
+ft_memdel
+ft_strnew
+ft_strdel
+ft_strclr
+ft_striter
+ft_striteri
+Je me suis arreter a ft_strmap
