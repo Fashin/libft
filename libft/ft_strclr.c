@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/08 19:48:49 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/08 19:55:08 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/08 20:05:10 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+void	ft_strclr(char *s)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	int		i;
+	int		max;
+
+	i = 0;
+	max = ft_strlen(s);
+	while (i < max)
+	{
+		s[i] = '\0';
+		i++;
+	}
 }

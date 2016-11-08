@@ -6,18 +6,18 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 13:15:23 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/06 18:01:26 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/08 20:13:18 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-const char	*check_the_spaces(const char *str)
+char	*check_the_spaces(char *str)
 {
 	int		i;
 
 	i = 0;
-	while (str[i] == 32 || str[i] == 9 
+	while (str[i] == 32 || str[i] == 9
 			|| str[i] == '\t' || str[i] == '\n'
 			|| str[i] == '\v' || str[i] == '\f'
 			|| str[i] == '\r')
@@ -34,7 +34,7 @@ int		ft_atoi(const char *str)
 	i = 0;
 	back = 0;
 	signe = 1;
-	str = check_the_spaces(str);
+	str = check_the_spaces((char *)str);
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')

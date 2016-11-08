@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 17:34:04 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/07 12:50:44 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/08 20:15:35 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*ft_strncpy(char *dest, const char *src, size_t n)
 		dest[i + j] = src[j];
 		j++;
 	}
-	dest[i + j] = '\0'; 
+	dest[i + j] = '\0';
 	return (dest);
 }

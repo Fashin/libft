@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 17:37:39 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/07 12:49:02 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/08 20:14:16 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_realloc(char *str, int size)
 
 	i = 0;
 	if (!(save = (char *)malloc(sizeof(char) * ft_strlen(str))))
-	   return (NULL);
+		return (NULL);
 	while (str[i])
 	{
 		save[i] = str[i];

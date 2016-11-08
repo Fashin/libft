@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 18:20:22 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/07 11:46:06 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/08 20:13:35 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	{
 		cdst[max] = csrc[max];
 		max++;
-	}	
+	}
 	return (cdst);
 }

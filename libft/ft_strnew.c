@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/08 19:48:49 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/08 19:50:06 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/08 19:51:58 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char	*ft_strnow(size_t size)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	char	*str;
+
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+		return (0);
+	str[size + 1] = '\0';
+	return (str);
 }
