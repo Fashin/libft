@@ -43,4 +43,11 @@ ft_strdel
 ft_strclr
 ft_striter
 ft_striteri
-Je me suis arreter a ft_strmap
+ft_strmap
+ft_strmapi
+ft_strequ
+ft_strnequ
+ft_strsub
+ft_strjoin
+ft_strtim
+Je me suis arreter a 
