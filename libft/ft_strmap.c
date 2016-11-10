@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 20:09:57 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/08 20:14:31 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/10 15:27:55 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,21 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
+	char	*str;
+	int		i;
 
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (str)
+	{
+		i = 0;
+		while (s[i])
+		{
+			str[i] = (*f)(s[i]);
+			i++;
+		}
+		str[i] = '\0';
+		return (str);
+	}
+	else
+		return (NULL);
 }

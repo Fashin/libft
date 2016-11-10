@@ -6,7 +6,7 @@
 #    By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:48:58 by cbeauvoi          #+#    #+#              #
-#    Updated: 2016/11/08 20:09:46 by cbeauvoi         ###   ########.fr        #
+#    Updated: 2016/11/10 16:32:09 by cbeauvoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRC_NAME = main ft_tolower ft_toupper ft_isprint ft_isascii \
 		   ft_strcpy ft_strncpy ft_strdup ft_memset ft_bzero \
 		   ft_memcpy ft_memccpy ft_memmove ft_memchr ft_memcmp \
 		   ft_memalloc ft_memdel ft_strnew ft_strdel ft_strclr \
-		   ft_striter ft_striteri
+		   ft_striter ft_striteri ft_strmap ft_strmapi ft_strequ \
+		   ft_strnequ ft_strsub ft_strjoin ft_strtrim
 
 FILE = $(SRC_NAME:=.c)
 
