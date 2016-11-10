@@ -50,4 +50,4 @@ ft_strnequ
 ft_strsub
 ft_strjoin
 ft_strtim
-Je me suis arreter a 
+Je me suis arreter a ft_strsplit
