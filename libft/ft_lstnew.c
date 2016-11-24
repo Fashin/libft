@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 18:49:24 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/24 17:39:16 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/24 18:22:09 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	(void)ac;
-	(void)av;
-	t_list	*list;
-	t_list	*list1;
-	t_list	*list2;
-	void const *str;
-	void const *str1;
-	void const *str2;
+	t_list		*list;
 
-	str = (void const *)"test";
-	list = ft_lstnew(str, 4);
-	str1 = (void const *)"bonjour";
-	list1 = ft_lstnew(str1, 6);
-	str2 = (void const *)"Hello";
-	list2 = ft_lstnew(str2, 5);
-	ft_lstadd(&list, list1);
-	ft_lstadd(&list, list2);
-	ft_lstdisplay(list);
-	return (0);
+	if (!(list = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	if (content == NULL)
+	{
+		list->content = NULL;
+		list->content_size = 0;
+	}
+	else
+	{
+		if (!(list->content = (void *)malloc(content_size)))
+			return (NULL);
+		ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }

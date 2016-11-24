@@ -6,7 +6,7 @@
 #    By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 15:48:58 by cbeauvoi          #+#    #+#              #
-#    Updated: 2016/11/24 17:29:14 by cbeauvoi         ###   ########.fr        #
+#    Updated: 2016/11/24 18:49:26 by cbeauvoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC_NAME = main ft_tolower ft_toupper ft_isprint ft_isascii \
 		   ft_strnequ ft_strsub ft_strjoin ft_strtrim ft_strsplit \
 		   ft_itoa ft_putstr ft_putchar ft_putendl ft_putnbr \
 		   ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd \
+		   ft_lstnew ft_lstadd ft_lstdisplay ft_lstdelone
 
 FILE = $(SRC_NAME:=.c)
 

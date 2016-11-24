@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/24 17:26:07 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 17:48:49 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/24 18:44:03 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/24 18:49:06 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *str, int fd)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	ft_putstr_fd(str, fd);
-	ft_putchar_fd('\n', fd);
+	(void)del;
+	printf("%s\n", (*alst)->content);
 }

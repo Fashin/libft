@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 12:41:11 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 17:28:48 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/24 18:47:35 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@
 # include <stdio.h>
 # include <unistd.h>
 
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list 	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstdisplay(t_list *list);
 void	*ft_memalloc(size_t size);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_bzero(void *s, size_t n);
