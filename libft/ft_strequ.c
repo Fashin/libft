@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:31:02 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/10 15:35:04 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/24 17:31:56 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (ft_strcmp((char *)s1, (char *)s2)  == 0)
+	if (ft_strcmp((char *)s1, (char *)s2) == 0)
 		return (1);
 	return (0);
 }

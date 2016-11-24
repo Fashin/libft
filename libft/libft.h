@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 12:41:11 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/10 16:30:32 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/24 17:28:48 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <ctype.h>
 # include <stdio.h>
+# include <unistd.h>
 
 void	*ft_memalloc(size_t size);
 void	*ft_memset(void *b, int c, size_t len);
@@ -29,6 +30,15 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *str);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar(char c);
+void	ft_putstr(char const *str);
+void	ft_putendl(char const *str);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *str, int fd);
+void	ft_putendl_fd(char const *str, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
 char	*ft_strtrim(char const *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *s1);
@@ -46,6 +56,7 @@ char	*ft_strnew(size_t size);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	**ft_strsplit(char const *s, char c);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 12:38:53 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/10 16:52:30 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/24 17:28:43 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
-	char *str = "           hello, worlds           ";
-	printf("%s\n", ft_strtrim(str));
+	const char *str = "Hello Worlds"
+	ft_putstr_fd(str, 0);
 	return (0);
 }

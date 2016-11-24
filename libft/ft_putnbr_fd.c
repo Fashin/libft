@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 17:37:39 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 16:56:28 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/24 16:17:53 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/24 17:31:02 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_realloc(char *str, int size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	char	*save;
-
-	i = 0;
-	if (!(save = (char *)malloc(sizeof(char) * ft_strlen(str))))
-		return (NULL);
-	while (str[i])
+	if (n == -2147483648)
 	{
-		save[i] = str[i];
-		i++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
-	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * size)))
-		return (NULL);
-	while (save[i])
+	if (n < 0)
 	{
-		str[i] = save[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		n = n * (-1);
 	}
-	free(save);
-	return (str);
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd((n % 10) + '0', fd);
 }

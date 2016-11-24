@@ -1,38 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/06 17:37:39 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 16:56:28 by cbeauvoi         ###   ########.fr       */
+/*   Created: 2016/11/24 17:26:07 by cbeauvoi          #+#    #+#             */
+/*   Updated: 2016/11/24 17:26:50 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_realloc(char *str, int size)
+void	ft_putendl_fd(char const *str, int fd)
 {
-	int		i;
-	char	*save;
-
-	i = 0;
-	if (!(save = (char *)malloc(sizeof(char) * ft_strlen(str))))
-		return (NULL);
-	while (str[i])
-	{
-		save[i] = str[i];
-		i++;
-	}
-	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * size)))
-		return (NULL);
-	while (save[i])
-	{
-		str[i] = save[i];
-		i++;
-	}
-	free(save);
-	return (str);
+	ft_putstr_fd(str, fd);
+	ft_putchar('\n', fd);
 }

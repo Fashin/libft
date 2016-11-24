@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 15:37:09 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/10 15:54:02 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2016/11/24 17:33:30 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (str)
 	{
 		i = -1;
-		while (s[i++] && i < start);
+		while (s[i] && i < start)
+			i++;
 		while (s[i++] && i - start <= len)
 			str[(i - start) - 1] = s[i];
 		str[i - start] = '\0';
