@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 16:11:44 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/11/24 16:16:07 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2017/06/22 16:56:22 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_putstr(char const *str)
 {
-	while (*str != '\0')
+	if (str)
 	{
-		ft_putchar(*str);
-		str++;
+		while (*str != '\0')
+		{
+			ft_putchar(*str);
+			str++;
+		}
 	}
 }

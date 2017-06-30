@@ -6,7 +6,7 @@
 /*   By: cbeauvoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 12:41:11 by cbeauvoi          #+#    #+#             */
-/*   Updated: 2016/12/06 20:46:04 by cbeauvoi         ###   ########.fr       */
+/*   Updated: 2017/06/22 15:38:02 by cbeauvoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_list					*ft_lstnew(void const *content, size_t content_size);
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list					*ft_add_fonction(t_list *elem);
 t_list					*ft_getlastmaillon(t_list *lst);
+t_list					*ft_lstselectsort(t_list *list, 
+						int (*cmp)(void *, void *));
 size_t					ft_strlcat(char *s1, const char *s2, size_t n);
 size_t					ft_strlen(const char *str);
 void					ft_lstreverse(t_list **lst);
